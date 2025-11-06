@@ -1,17 +1,4 @@
 # sjtmp-vault-template
-A template for a personalized Zettelkasten workflow: Seed → Journal → Theme → Meta → Publish.
-
-# directories structure
-00_Seed      — raw notes / inbox / quick capture
-01_Journal   — daily logs / observations
-02_Theme     — recurrent topics
-   ├ Private — personal themes
-   └ Public  — generalizable themes
-03_Meta      — structured insights
-04_Publish   — external outputs
-templates    — note templates
-
-# sjtmp-vault-template
 
 A template for a personalized Zettelkasten workflow:  
 **Seed → Journal → Theme → Meta → Publish**
