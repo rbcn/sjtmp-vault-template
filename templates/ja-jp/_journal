@@ -1,0 +1,26 @@
+---
+title: ""
+layer: journal
+tags: []
+status: journal
+created: {{date}} {{time}}
+updated: {{date}} {{time}}
+source: ""
+related: []
+---
+
+# コンテキスト
+(状況 / 背景)
+
+# ログ
+- できごと
+- 気づき
+- 心の動き
+
+# 省察
+- 良かった点
+- 課題
+- 学び
+
+# Next
+- Theme へ昇格？
