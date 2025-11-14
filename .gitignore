@@ -1,0 +1,54 @@
+# =====================================================
+# SJTMP Vault Git Ignore Rules
+# Seed → Journal → Theme → Meta → Publish Framework
+# Author: RBCN
+# =====================================================
+
+# --- OS / Editor specific -------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Obsidian internal config (machine-dependent) -------------
+.obsidian/core-plugins.json
+.obsidian/app.json
+.obsidian/workspace*
+.obsidian/appearance.json
+.obsidian/snippets/
+.obsidian/plugins/
+.obsidian/community-plugins.json
+.obsidian/cache/
+
+# --- Backup / Temp files --------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.old
+
+# --- AI / Script generated intermediates -----------------------
+__pycache__/
+.cache/
+outputs/
+*.checkpoint
+*.embeddings
+
+# --- System / Sync artifacts ----------------------------------
+*.icloud
+*.sync-conflict*
+*.lnk
+ehthumbs.db
+
+# --- Node / Python / Local deps (for plugin dev or hooks) -----
+node_modules/
+venv/
+.env
+*.egg-info/
+
+# --- Optional custom ignore for Smart Composer / Claude -------
+# Un-comment if plugin generates temp JSON or history locally
+# smart-composer-history.json
+# claude_cache.json
+
+# --- Keep the structure even if folders are empty -------------
+!.gitkeep
