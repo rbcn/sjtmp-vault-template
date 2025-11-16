@@ -1,7 +1,6 @@
 # =====================================================
 # SJTMP Vault Git Ignore Rules
-# Seed → Journal → Theme → Meta → Publish Framework
-# Author: RBCN
+# Seed → Journal → Theme → Meta → Publish
 # =====================================================
 
 # --- OS / Editor specific -------------------------------------
@@ -9,46 +8,52 @@
 Thumbs.db
 desktop.ini
 
-# --- Obsidian internal config (machine-dependent) -------------
-.obsidian/core-plugins.json
+# --- Obsidian machine-dependent files --------------------------
 .obsidian/app.json
-.obsidian/workspace*
 .obsidian/appearance.json
-.obsidian/snippets/
-.obsidian/plugins/
-.obsidian/community-plugins.json
+.obsidian/workspace*
 .obsidian/cache/
+.obsidian/snippets/
+.obsidian/community-plugins.json
+.obsidian/core-plugins.json
 
-# --- Backup / Temp files --------------------------------------
+# --- Ignore ALL plugins (plugin code should NOT be in Git) -----
+.obsidian/plugins/
+
+# --- Smart Composer internal DB --------------------------------
+.smtcmp_json_db/
+.smtcmp_json_db*
+
+# --- Smart Composer vector DB (tar.gz) -------------------------
+.smtcmp_vector_db.tar.gz
+
+# --- Obsidian Git internal -------------------------------------
+.obsidian-git-data.json
+
+# --- RAG embeddings / caches -----------------------------------
+*.embeddings
+*.checkpoint
+.cache/
+*.canvas.cache
+
+# --- Backup / Temp files ---------------------------------------
 *.log
 *.tmp
 *.bak
 *.swp
 *.old
 
-# --- AI / Script generated intermediates -----------------------
-__pycache__/
-.cache/
-outputs/
-*.checkpoint
-*.embeddings
-
-# --- System / Sync artifacts ----------------------------------
+# --- System / Sync artifacts -----------------------------------
 *.icloud
 *.sync-conflict*
 *.lnk
 ehthumbs.db
 
-# --- Node / Python / Local deps (for plugin dev or hooks) -----
+# --- Development deps ------------------------------------------
 node_modules/
 venv/
 .env
 *.egg-info/
 
-# --- Optional custom ignore for Smart Composer / Claude -------
-# Un-comment if plugin generates temp JSON or history locally
-# smart-composer-history.json
-# claude_cache.json
-
-# --- Keep the structure even if folders are empty -------------
+# --- Keep folder structure -------------------------------------
 !.gitkeep
