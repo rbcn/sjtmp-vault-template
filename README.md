@@ -1,14 +1,20 @@
-# sjtmp-vault-template
+# **sjtmp-vault-template**
 
-A template for a personalized Zettelkasten workflow:  
+A reproducible Obsidian vault template for a personalized
+Zettelkasten-inspired workflow:
 **Seed → Journal → Theme → Meta → Publish (SJTMP)**
 
-This repository provides a minimal folder structure, note templates,  
-and optional AI-assisted tooling for structuring your thinking with Obsidian.
+This repository provides:
+
+* Minimal folder structure
+* Note templates (JA/EN)
+* Optional AI-assisted tooling (Smart Composer + Claude API)
+
+for running your “external brain” knowledge system across devices.
 
 ---
 
-## Directory Structure
+## **Directory Structure**
 
 ```text
 00_Seed/       — raw notes / quick capture
@@ -18,89 +24,93 @@ and optional AI-assisted tooling for structuring your thinking with Obsidian.
   └ Public/    — generalizable themes
 03_Meta/       — conceptual models / structure
 04_Publish/    — external outputs (drafts)
-templates/     — note templates (SJTMP + Smart Composer prompts)
-````
+templates/     
+  ├ en-us/     — note templates (EN)
+  ├ ja-jp/     — note templates (JA)
+  └ prompts/   — Smart Composer prompt definitions (JSON + MD)
+```
 
-> This structure mirrors the intended knowledge flow:
-> **Seed → Journal → Theme → Meta → Publish**
+This mirrors the intended knowledge flow:
+**Seed → Journal → Theme → Meta → Publish**
 
 ---
 
-## Recommended Obsidian Setup (Optional but Powerful)
+## **Recommended Obsidian Setup (Optional but Powerful)**
 
-This vault is optimized for:
+This vault is optimized for three plugins:
 
 * **Templater**
-* **Smart Composer** (Claude/OpenAI)
+* **Smart Composer** (Claude API / OpenAI)
 * **Obsidian Git**
 
-If you want full reproducibility across multiple devices:
+If you want reproducibility across devices:
 
-### 1. Clone the repository locally
+### **1. Clone the repository**
 
 ```sh
 git clone https://github.com/your/repo.git
 ```
 
-### 2. Open the folder as a Vault in Obsidian
+### **2. Open the folder as an Obsidian Vault**
 
-### 3. Install required plugins
+### **3. Install required plugins**
 
-1. *Templater*
-2. *Smart Composer*
-3. *Obsidian Git*
+1. **Templater**
+2. **Smart Composer**
+3. **Obsidian Git**
 
-### 4. Configure Smart Composer (one-time per device)
+### **4. Re-import Smart Composer prompts**
 
-Smart Composer does not sync settings automatically.
-Use the prompts stored in:
+Smart Composer does *not* sync settings automatically.
 
+Use the canonical config stored in:
+
+```path
+templates/prompts/smart-composer/
 ```
-templates/_prompts/obsidian-smart_composer/
-```
 
-especially:
+Especially:
 
-```
-_sjtmp-prompts.md   — canonical source of all SJTMP prompt templates
+```path
+_sjtmp-prompts.md   — full system prompt + all SJTMP templates
 ```
 
 For each prompt:
 
-* Open Smart Composer → Prompt Templates → New Template
-* Copy/paste content from the markdown file
-* Give it the same name (recommended)
+* Smart Composer → Prompt Templates → “New Template”
+* Paste the content
+* Use the same `name:` suggested in the file
 
-### 5. Start capturing Seeds
+### **5. Start capturing Seeds**
 
-* On mobile: create a new note in `00_Seed/`
-* On desktop: promote using Smart Composer (Seed → Journal → Theme → Meta → Publish)
+* On mobile: create notes directly in `00_Seed/`
+* On desktop: promote via Smart Composer (Seed → Journal → Theme → Meta → Publish)
 
 ---
 
-## Multi-Device Notes
+## **Multi-Device Setup Checklist**
 
-To set up a new machine:
+For a new machine:
 
-1. Clone the repo
+1. Clone this repo
 2. Install Obsidian
-3. Install the three plugins
-4. Re-import Smart Composer prompts from `_sjtmp-prompts.md`
-5. Pull/push via Obsidian Git
+3. Install Templater / Smart Composer / Obsidian Git
+4. Paste Smart Composer templates from `_sjtmp-prompts.md`
+5. Sync via Obsidian Git
 
-This ensures perfect reproducibility without syncing plugin binaries or local DBs.
-
----
-
-## Usage
-
-1. Start jotting raw ideas in **`00_Seed/`**
-2. Promote them naturally through the SJTMP layers
-3. Use Smart Composer for optional structured transformation
-4. Publish drafts from **`04_Publish/`**
+This ensures 100% reproducibility without syncing plugin binaries or local DBs.
 
 ---
 
-## License
+## **Usage**
+
+1. Capture ideas quickly in `00_Seed/`
+2. Promote notes naturally through the SJTMP layers
+3. Use Smart Composer when helpful
+4. Refine Publish drafts in `04_Publish/`
+
+---
+
+## **License**
 
 MIT (or your preferred license)
