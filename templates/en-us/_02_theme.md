@@ -1,27 +1,33 @@
 ---
-title: ""
+title: "<% tp.system.prompt('Theme Title?') %>"
 layer: theme
-privacy: private   # or public
-tags: []
-status: evolving
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
+privacy: "<% tp.system.suggester(['private','public'],['private','public'],'Privacy?') %>"
+tags: ["theme"]
+status: "evolving"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
 related: []
 ---
 
-# Overview
-(what is this theme about?)
+## 🧭 Overview
 
-# Why
-(why is this important?)
+<% tp.system.prompt('What is this theme about?') %>
 
-# Notes
-- observations
-- hypotheses
-- cases
+## 💡 Why
 
-# Links
-- related Journal / Seed
+<% tp.system.prompt('Why is this important?') %>
 
-# Next
-- promote to Meta?
+## 🧩 Notes
+
+- observations  
+- hypotheses  
+- examples or cases  
+
+## 🔗 Links
+
+- related Journal / Seed notes  
+
+## 🔜 Next
+
+- promote to Meta?  
+- further exploration or synthesis steps

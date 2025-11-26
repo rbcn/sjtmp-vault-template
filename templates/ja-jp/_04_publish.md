@@ -1,21 +1,24 @@
 ---
-title: ""
+title: "<% tp.system.prompt('公開物のタイトルは？') %>"
 layer: publish
-tags: []
-status: drafted   # drafted / published
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-outlet: ""   # tumblr / hashnode / slides / fiction / etc
+tags: ["publish"]
+status: "<% tp.system.suggester(['drafted','published'],['drafted','published'],'ステータスは？（drafted / published）') %>"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+outlet: "<% tp.system.suggester(['tumblr','hashnode','note','x','slides','fiction'],['tumblr','hashnode','note','x','slides','fiction'],'公開先は？') %>"
 url: ""
 related: []
 ---
 
-# ドラフト
-(本文 or 草稿)
+## 📝 下書き
 
-# サマリ
-(概要)
+（本文・メインコンテンツ）
 
-# 公開ログ
-- date:
-- url:
+## 🧭 要約
+
+（短い説明）
+
+## 📅 公開ログ
+
+- 公開日:  
+- URL:  

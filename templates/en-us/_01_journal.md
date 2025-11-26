@@ -1,26 +1,33 @@
 ---
-title: ""
+title: "<% tp.system.prompt('Journal Title? (optional)') %>"
 layer: journal
-tags: []
-status: journal
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-source: ""
+tags: ["journal"]
+status: "active"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+source: "<% tp.system.prompt('Source? (self / convo / event / reading / etc.)') %>"
 related: []
 ---
 
-# Context
+## 🪞 Context
+
 (background / when / where)
 
-# Log
-- events
-- observations
-- feelings
+<% tp.system.prompt('Briefly describe the context or situation') %>
 
-# Reflection
-- insights
-- issues
-- learnings
+## 🧭 Log
 
-# Next
-- promote to Theme?
+- events  
+- observations  
+- feelings  
+
+## 💭 Reflection
+
+- insights  
+- issues  
+- learnings  
+
+## 🔜 Next
+
+- promote to Theme?  
+- follow-up ideas or connections

@@ -1,19 +1,23 @@
 ---
-title: ""
+title: "<% tp.system.prompt('シードのタイトルは？') %>"
 layer: seed
-tags: []
-status: draft
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-source: ""   # thought / chatgpt / web / book / convo etc.
+tags: ["seed"]
+status: "draft"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+source: "<% tp.system.prompt('出典は？（思考／ChatGPT／Web／本／会話など）') %>"
 ---
 
-# 概要
-(一言で)
+## 💡 要約
 
-# メモ
-- 断片でOK
-- 思いつくまま書く
+<% tp.system.prompt('このシードの簡単な説明を') %>
 
-# Next
-- 次にどうする？
+## 🧩 メモ
+
+- 思いつきをそのまま書いてOK  
+- 構造化しなくてよい  
+- 流れに任せて書く  
+
+## 🔜 次に考えること
+
+- 関連する行動・再考のきっかけなど

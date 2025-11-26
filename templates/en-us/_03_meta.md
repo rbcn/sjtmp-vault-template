@@ -1,24 +1,30 @@
 ---
-title: ""
+title: "<% tp.system.prompt('Meta Title?') %>"
 layer: meta
-tags: []
-status: meta
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
+tags: ["meta"]
+status: "meta"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
 related: []
 ---
 
-# Abstract
-(summary)
+## 🧠 Abstract
 
-# Concepts
-(abstract ideas)
+<% tp.system.prompt('Summarize the key insight or synthesis') %>
 
-# Structure
-(logics / causal relations)
+## 🧩 Concepts
 
-# Connections
+(abstract ideas, general principles, or frameworks)
+
+## 🧱 Structure
+
+(logics, causal relations, systems)
+
+## 🔗 Connections
+
 - related Theme / Journal
 
-# Next
-- plan for Publish?
+## 🔜 Next
+
+- plan for Publish?  
+- what kind of output (essay, note, post)?

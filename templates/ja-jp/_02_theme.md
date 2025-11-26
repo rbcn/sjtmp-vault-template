@@ -1,27 +1,33 @@
 ---
-title: ""
+title: "<% tp.system.prompt('テーマのタイトルは？') %>"
 layer: theme
-privacy: private   # or public
-tags: []
-status: evolving
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
+privacy: "<% tp.system.suggester(['private','public'],['private','public'],'公開範囲は？') %>"
+tags: ["theme"]
+status: "evolving"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
 related: []
 ---
 
-# 概要
-(テーマ概要)
+## 🧭 概要
 
-# なぜ重要？
-(Why)
+<% tp.system.prompt('このテーマは何について？') %>
 
-# ノート
-- 観察
-- 仮説
-- 事例
+## 💡 重要性
 
-# リンク
-- 関連 Journal / Seed
+<% tp.system.prompt('なぜこのテーマが重要？') %>
 
-# Next
-- Meta へ昇格？
+## 🧩 メモ
+
+- 観察  
+- 仮説  
+- 事例やケース  
+
+## 🔗 リンク
+
+- 関連するジャーナル／シード  
+
+## 🔜 次にすること
+
+- メタ層に発展させる？  
+- さらに掘り下げる・整理する？

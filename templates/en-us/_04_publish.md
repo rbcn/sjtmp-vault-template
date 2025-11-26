@@ -1,21 +1,24 @@
 ---
-title: ""
+title: "<% tp.system.prompt('Publish Title?') %>"
 layer: publish
-tags: []
-status: drafted   # drafted / published
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-outlet: ""   # tumblr / hashnode / note / X / slides / fiction
+tags: ["publish"]
+status: "<% tp.system.suggester(['drafted','published'],['drafted','published'],'Status?') %>"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+outlet: "<% tp.system.suggester(['tumblr','hashnode','note','x','slides','fiction'],['tumblr','hashnode','note','x','slides','fiction'],'Outlet?') %>"
 url: ""
 related: []
 ---
 
-# Draft
+## 📝 Draft
+
 (main content / text)
 
-# Summary
-(short description)
+## 🧭 Summary
 
-# Published Log
-- date:
-- url:
+(short description / abstract)
+
+## 📅 Published Log
+
+- date:  
+- url:  

@@ -1,19 +1,23 @@
 ---
-title: ""
+title: "<% tp.system.prompt('Seed Title?') %>"
 layer: seed
-tags: []
-status: draft
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-source: ""   # thought / chatgpt / web / book / convo etc.
+tags: ["seed"]
+status: "draft"
+created: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+updated: "<% tp.date.now('YYYY-MM-DD HH:mm') %>"
+source: "<% tp.system.prompt('Source? (thought / chatgpt / web / book / convo etc.)') %>"
 ---
 
-# Summary
-(short description)
+## 💡 Summary
 
-# Notes
-- raw fragments
+<% tp.system.prompt('Short description of this seed') %>
+
+## 🧩 Notes
+
+- jot down raw fragments here
 - unstructured is fine
+- follow intuition, not order
 
-# Next
-- any follow-up?
+## 🔜 Next
+
+- possible follow-up actions or related thoughts
